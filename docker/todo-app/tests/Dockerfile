@@ -1,6 +1,5 @@
-FROM node:14-alpine
-WORKDIR /docker/todo-app/front-end/
-EXPOSE 3001
+FROM mjgargani/puppeteer:trybe1.0
+WORKDIR /docker/todo-app/tests/
 ADD node_modules.tar.gz ./
 COPY . .
 ENTRYPOINT ["npm", "test"]
